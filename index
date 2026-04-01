@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Política de Privacidade - Painel de Loterias Pro</title>
+    <title>Política de Privacidade - LotoFacilScanner</title>
     <meta name="description" content="Política de Privacidade do aplicativo Painel de Loterias Pro - Ferramenta independente para conferência de loterias">
     <meta name="author" content="Airon Gonçalves de Moura">
     <style>
@@ -277,7 +277,7 @@
                 Política de Privacidade
                 <span class="emoji">🎲</span>
             </h1>
-            <p>Painel de Loterias Pro</p>
+            <p>LotoFacilScanner</p>
             <div class="badge">Ferramenta Independente de Conferência</div>
             <div class="update-date">📅 Última atualização: 31 de março de 2026</div>
         </div>
@@ -286,7 +286,7 @@
             <!-- Introdução -->
             <div class="section">
                 <h2>📋 1. Introdução</h2>
-                <p>O aplicativo <strong>Painel de Loterias Pro</strong> ("nós", "nosso" ou "aplicativo") respeita sua privacidade e está comprometido em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados quando você utiliza nosso aplicativo.</p>
+                <p>O aplicativo <strong>LotoFacilScanner</strong> ("nós", "nosso" ou "aplicativo") respeita sua privacidade e está comprometido em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados quando você utiliza nosso aplicativo.</p>
                 <div class="info-card">
                     <h4>✅ Resumo Rápido</h4>
                     <p><strong>Não coletamos nenhum dado pessoal.</strong> Todas as informações ficam armazenadas exclusivamente no seu próprio dispositivo.</p>
@@ -384,34 +384,7 @@
                 <p>Este aplicativo é uma <strong>ferramenta independente para conferência e geração de jogos</strong> e não possui qualquer vínculo com a Caixa Econômica Federal ou qualquer outra instituição oficial de loterias. Os jogos gerados ou conferidos no aplicativo <strong>não garantem ganhos reais</strong>. Sempre confira seus bilhetes no site oficial das Loterias Caixa.</p>
             </div>
 
-            <!-- Informações para o Play Console -->
-            <div class="section">
-                <h2>📱 10. Informações para o Google Play Console</h2>
-                <p>Ao preencher o questionário de privacidade no Google Play Console, utilize estas informações:</p>
-                
-                <table class="data-table">
-                    <tr>
-                        <th>Tipo de dado coletado</th>
-                        <td>Nenhum dado pessoal é coletado</td>
-                    </tr>
-                    <tr>
-                        <th>Compartilhamento com terceiros</th>
-                        <td>Não compartilhamos dados</td>
-                    </tr>
-                    <tr>
-                        <th>Criptografia em trânsito</th>
-                        <td>Não aplicável (dados apenas locais)</td>
-                    </tr>
-                    <tr>
-                        <th>Política de privacidade</th>
-                        <td>Disponível publicamente neste link</td>
-                    </tr>
-                    <tr>
-                        <th>Categoria do app</th>
-                        <td>Ferramenta de conferência e geração de jogos de loteria</td>
-                    </tr>
-                </table>
-            </div>
+            
         </div>
 
         <!-- Footer com Contato -->
@@ -426,7 +399,7 @@
                 </p>
             </div>
             <p style="margin-top: 20px; font-size: 0.75rem; color: #a0aec0;">
-                © 2026 Painel de Loterias Pro - Todos os direitos reservados
+                © 2026 LotoFacilScanner - Todos os direitos reservados
             </p>
         </div>
     </div>
