@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Política de Privacidade - LotoFacilScanner</title>
+    <meta name="description" content="Política de Privacidade do aplicativo Painel de Loterias Pro - Ferramenta independente para conferência de loterias">
+    <meta name="author" content="Airon Gonçalves de Moura">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #1a202c;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #9b2a92 0%, #209869 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header .emoji {
+            font-size: 2rem;
+        }
+
+        .header .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        .update-date {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        /* Conteúdo */
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section h2 {
+            color: #2d3748;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 4px solid #9b2a92;
+            padding-left: 15px;
+        }
+
+        .section h3 {
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin: 16px 0 10px 0;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+
+        .section ul, .section ol {
+            margin: 12px 0 12px 25px;
+            color: #4a5568;
+        }
+
+        .section li {
+            margin-bottom: 6px;
+        }
+
+        /* Cards de informação */
+        .info-card {
+            background: #f7fafc;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #209869;
+        }
+
+        .info-card.warning {
+            border-left-color: #e74c3c;
+            background: #fff5f5;
+        }
+
+        .info-card h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .badge-list span {
+            background: #edf2f7;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-family: monospace;
+            color: #2d3748;
+        }
+
+        /* Tabela */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        .data-table td, .data-table th {
+            border: 1px solid #e2e8f0;
+            padding: 10px 12px;
+            vertical-align: top;
+        }
+
+        .data-table th {
+            background: #f7fafc;
+            font-weight: 600;
+            width: 35%;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f7fafc;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .contact {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact a {
+            color: #9b2a92;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-copy {
+            background: #9b2a92;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: 12px;
+            transition: all 0.3s;
+        }
+
+        .btn-copy:hover {
+            background: #7b1f74;
+            transform: scale(1.02);
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2d3748;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.2rem;
+            }
+            
+            .data-table td, .data-table th {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+            
+            .badge-list span {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span class="emoji">🍀</span>
+                Política de Privacidade
+                <span class="emoji">🎲</span>
+            </h1>
+            <p>LotoFacilScanner</p>
+            <div class="badge">Ferramenta Independente de Conferência</div>
+            <div class="update-date">📅 Última atualização: 31 de março de 2026</div>
+        </div>
+
+        <div class="content">
+            <!-- Introdução -->
+            <div class="section">
+                <h2>📋 1. Introdução</h2>
+                <p>O aplicativo <strong>LotoFacilScanner</strong> ("nós", "nosso" ou "aplicativo") respeita sua privacidade e está comprometido em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados quando você utiliza nosso aplicativo.</p>
+                <div class="info-card">
+                    <h4>✅ Resumo Rápido</h4>
+                    <p><strong>Não coletamos nenhum dado pessoal.</strong> Todas as informações ficam armazenadas exclusivamente no seu próprio dispositivo.</p>
+                </div>
+            </div>
+
+            <!-- Coleta de Dados -->
+            <div class="section">
+                <h2>🔒 2. Coleta de Dados</h2>
+                <p><strong>Nosso aplicativo NÃO coleta, armazena ou compartilha nenhum dado pessoal dos usuários.</strong></p>
+                <p>Todas as informações inseridas no aplicativo (como jogos cadastrados, resultados salvos e preferências) são armazenadas <strong>exclusivamente no próprio dispositivo do usuário</strong>, utilizando o armazenamento local do navegador (localStorage).</p>
+                
+                <h3>📁 Dados armazenados localmente:</h3>
+                <ul>
+                    <li>Jogos cadastrados pelo usuário (números apostados)</li>
+                    <li>Histórico de conferências</li>
+                    <li>Estatísticas de premiações</li>
+                    <li>Slots de memória (jogos salvos nos slots A, B, C, D, E)</li>
+                    <li>Controle financeiro (valores de gastos e ganhos inseridos pelo usuário)</li>
+                </ul>
+            </div>
+
+            <!-- Uso de Dados -->
+            <div class="section">
+                <h2>⚙️ 3. Uso de Dados</h2>
+                <p>Como não coletamos dados pessoais, não utilizamos suas informações para:</p>
+                <ul>
+                    <li>Marketing ou publicidade direcionada</li>
+                    <li>Compartilhamento com terceiros</li>
+                    <li>Criação de perfis de usuário</li>
+                </ul>
+                <p>Os dados armazenados localmente são utilizados <strong>exclusivamente para o funcionamento do aplicativo</strong>, permitindo:</p>
+                <ul>
+                    <li>Conferência de jogos</li>
+                    <li>Cálculo de premiações</li>
+                    <li>Controle financeiro pessoal</li>
+                    <li>Geração de estatísticas de acertos</li>
+                </ul>
+            </div>
+
+            <!-- Compartilhamento -->
+            <div class="section">
+                <h2>🔄 4. Compartilhamento de Dados</h2>
+                <p><strong>Não compartilhamos nenhum dado com terceiros.</strong> Não utilizamos serviços de análise, rastreamento ou publicidade que coletem informações dos usuários.</p>
+            </div>
+
+            <!-- APIs Externas -->
+            <div class="section">
+                <h2>🌐 5. Conexões com APIs Externas</h2>
+                <p>O aplicativo realiza chamadas a <strong>APIs públicas e gratuitas</strong> para obter os resultados oficiais das loterias (Lotofácil e Mega-Sena). Estas chamadas:</p>
+                <ul>
+                    <li>Não enviam nenhum dado pessoal</li>
+                    <li>Apenas consultam resultados de concursos públicos</li>
+                </ul>
+                
+                <h3>APIs utilizadas (em ordem de fallback):</h3>
+                <div class="badge-list">
+                    <span>loteriascaixa-api.herokuapp.com</span>
+                    <span>api-loteria.vercel.app</span>
+                    <span>lotodicas.com.br</span>
+                </div>
+                <p class="small" style="font-size: 0.8rem; color: #718096;">⚠️ As APIs consultadas podem coletar dados conforme suas próprias políticas de privacidade. Recomendamos consultar as políticas de cada serviço para mais informações.</p>
+            </div>
+
+            <!-- Segurança -->
+            <div class="section">
+                <h2>🛡️ 6. Segurança</h2>
+                <p>Como todos os dados são armazenados <strong>localmente no dispositivo do usuário</strong>, a segurança das informações depende exclusivamente das configurações de segurança do seu dispositivo e navegador. Recomendamos:</p>
+                <ul>
+                    <li>Manter seu dispositivo e navegador atualizados</li>
+                    <li>Não compartilhar seu dispositivo com pessoas não autorizadas</li>
+                    <li>Utilizar bloqueio de tela em seu dispositivo</li>
+                </ul>
+            </div>
+
+            <!-- Menores -->
+            <div class="section">
+                <h2>👨‍👩‍👧 7. Dados de Menores de Idade</h2>
+                <p>Nosso aplicativo não coleta dados de menores de 18 anos. O uso do aplicativo é recomendado apenas para maiores de idade, conforme exigido pela legislaiseira para apostas em loterias.</p>
+                <div class="info-card warning">
+                    <h4>🔞 APOSTAR É PARA MAIORES DE 18 ANOS</h4>
+                    <p>Este aplicativo é destinado exclusivamente para usuários maiores de idade.</p>
+                </div>
+            </div>
+
+            <!-- Alterações -->
+            <div class="section">
+                <h2>📝 8. Alterações nesta Política</h2>
+                <p>Podemos atualizar esta Política de Privacidade ocasionalmente. Recomendamos revisar esta página periodicamente para quaisquer alterações. Alterações significativas serão comunicadas por meio de aviso no próprio aplicativo.</p>
+            </div>
+
+            <!-- Isenção -->
+            <div class="section">
+                <h2>⚠️ 9. Isenção de Responsabilidade</h2>
+                <p>Este aplicativo é uma <strong>ferramenta independente para conferência e geração de jogos</strong> e não possui qualquer vínculo com a Caixa Econômica Federal ou qualquer outra instituição oficial de loterias. Os jogos gerados ou conferidos no aplicativo <strong>não garantem ganhos reais</strong>. Sempre confira seus bilhetes no site oficial das Loterias Caixa.</p>
+            </div>
+
+            
+        </div>
+
+        <!-- Footer com Contato -->
+        <div class="footer">
+            <h3 style="margin-bottom: 15px;">📧 Contato</h3>
+            <div class="contact">
+                <p><strong>Desenvolvedor:</strong> Airon Gonçalves de Moura</p>
+                <p><strong>E-mail:</strong> <a href="mailto:aironagm@gmail.com">aironagm@gmail.com</a></p>
+                <button class="btn-copy" onclick="copiarEmail()">📋 Copiar e-mail</button>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: #718096;">
+                    Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail acima.
+                </p>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.75rem; color: #a0aec0;">
+                © 2026 LotoFacilScanner - Todos os direitos reservados
+            </p>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">✅ E-mail copiado!</div>
+
+    <script>
+        function copiarEmail() {
+            const email = "aironagm@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                mostrarToast("✅ E-mail copiado: " + email);
+            }).catch(() => {
+                // Fallback para navegadores antigos
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                mostrarToast("✅ E-mail copiado: " + email);
+            });
+        }
+
+        function mostrarToast(mensagem) {
+            const toast = document.getElementById('toast');
+            toast.textContent = mensagem;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
