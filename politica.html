@@ -31,7 +31,6 @@
             overflow: hidden;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(135deg, #9b2a92 0%, #209869 100%);
             padding: 40px 30px;
@@ -68,7 +67,6 @@
             opacity: 0.9;
         }
 
-        /* Conteúdo */
         .content {
             padding: 30px;
         }
@@ -116,7 +114,6 @@
             margin-bottom: 6px;
         }
 
-        /* Cards de informação */
         .info-card {
             background: #f7fafc;
             border-radius: 16px;
@@ -152,7 +149,6 @@
             color: #2d3748;
         }
 
-        /* Tabela */
         .data-table {
             width: 100%;
             border-collapse: collapse;
@@ -172,7 +168,6 @@
             width: 35%;
         }
 
-        /* Footer */
         .footer {
             background: #f7fafc;
             padding: 25px 30px;
@@ -215,7 +210,6 @@
             transform: scale(1.02);
         }
 
-        /* Toast */
         .toast {
             position: fixed;
             bottom: 30px;
@@ -236,7 +230,6 @@
             opacity: 1;
         }
 
-        /* Responsivo */
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -279,7 +272,7 @@
             </h1>
             <p>LotoFacilScanner</p>
             <div class="badge">Ferramenta Independente de Conferência</div>
-            <div class="update-date">📅 Última atualização: 31 de março de 2026</div>
+            <div class="update-date">📅 Última atualização: 17 de maio de 2026</div>
         </div>
 
         <div class="content">
@@ -289,17 +282,16 @@
                 <p>O aplicativo <strong>LotoFacilScanner</strong> ("nós", "nosso" ou "aplicativo") respeita sua privacidade e está comprometido em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados quando você utiliza nosso aplicativo.</p>
                 <div class="info-card">
                     <h4>✅ Resumo Rápido</h4>
-                    <p><strong>Não coletamos nenhum dado pessoal.</strong> Todas as informações ficam armazenadas exclusivamente no seu próprio dispositivo.</p>
+                    <p><strong>Coletamos apenas o identificador anônimo do dispositivo</strong> para controle do período de teste gratuito. Nenhum dado pessoal (nome, e-mail, localização) é coletado.</p>
                 </div>
             </div>
 
             <!-- Coleta de Dados -->
             <div class="section">
                 <h2>🔒 2. Coleta de Dados</h2>
-                <p><strong>Nosso aplicativo NÃO coleta, armazena ou compartilha nenhum dado pessoal dos usuários.</strong></p>
-                <p>Todas as informações inseridas no aplicativo (como jogos cadastrados, resultados salvos e preferências) são armazenadas <strong>exclusivamente no próprio dispositivo do usuário</strong>, utilizando o armazenamento local do navegador (localStorage).</p>
+                <p><strong>Nosso aplicativo coleta APENAS o identificador anônimo do dispositivo (ANDROID_ID) para controle do período de teste gratuito de 7 dias.</strong></p>
                 
-                <h3>📁 Dados armazenados localmente:</h3>
+                <h3>📁 Dados armazenados localmente (no seu dispositivo):</h3>
                 <ul>
                     <li>Jogos cadastrados pelo usuário (números apostados)</li>
                     <li>Histórico de conferências</li>
@@ -307,9 +299,23 @@
                     <li>Slots de memória (jogos salvos nos slots A, B, C, D, E)</li>
                     <li>Controle financeiro (valores de gastos e ganhos inseridos pelo usuário)</li>
                 </ul>
+                
+                <h3>☁️ Dados armazenados na nuvem (Firebase Firestore):</h3>
+                <div class="info-card">
+                    <h4>🔍 Único dado coletado na nuvem:</h4>
+                    <p><strong>ANDROID_ID</strong> - Identificador anônimo do dispositivo, utilizado exclusivamente para verificar se o período de teste gratuito de 7 dias já foi utilizado.</p>
+                </div>
+                <ul>
+                    <li><strong>O que coletamos:</strong> Apenas o ID anônimo do dispositivo (ANDROID_ID)</li>
+                    <li><strong>O que NÃO coletamos:</strong> Nome, e-mail, localização, contatos, fotos, histórico de navegação ou qualquer outro dado pessoal</li>
+                    <li><strong>Finalidade exclusiva:</strong> Controle do período de teste gratuito (impedir que o mesmo dispositivo utilize o teste mais de uma vez)</li>
+                    <li><strong>Armazenamento:</strong> Firebase Firestore (Google Cloud Platform)</li>
+                    <li><strong>Tempo de retenção:</strong> O identificador é mantido apenas para controle do trial, sem prazo de expiração automática</li>
+                </ul>
+                <p style="font-size: 0.85rem; color: #718096;">📱 O ANDROID_ID é um identificador gerado pelo sistema Android que não contém informações pessoais e pode ser redefinido pelo usuário nas configurações do dispositivo.</p>
             </div>
 
-            <!-- Uso de Dados -->
+             <!-- Uso de Dados -->
             <div class="section">
                 <h2>⚙️ 3. Uso de Dados</h2>
                 <p>Como não coletamos dados pessoais, não utilizamos suas informações para:</p>
@@ -330,33 +336,50 @@
             <!-- Compartilhamento -->
             <div class="section">
                 <h2>🔄 4. Compartilhamento de Dados</h2>
-                <p><strong>Não compartilhamos nenhum dado com terceiros.</strong> Não utilizamos serviços de análise, rastreamento ou publicidade que coletem informações dos usuários.</p>
+                <p><strong>Não compartilhamos nenhum dado com terceiros.</strong> O identificador anônimo do dispositivo é armazenado exclusivamente no Firebase Firestore (Google Cloud) e não é compartilhado com nenhuma outra empresa, serviço ou indivíduo.</p>
+                <p>Não utilizamos serviços de análise, rastreamento ou publicidade que coletem informações dos usuários.</p>
             </div>
 
-            <!-- APIs Externas -->
+            <!-- Serviços Externos -->
             <div class="section">
-                <h2>🌐 5. Conexões com APIs Externas</h2>
-                <p>O aplicativo realiza chamadas a <strong>APIs públicas e gratuitas</strong> para obter os resultados oficiais das loterias (Lotofácil e Mega-Sena). Estas chamadas:</p>
-                <ul>
-                    <li>Não enviam nenhum dado pessoal</li>
-                    <li>Apenas consultam resultados de concursos públicos</li>
-                </ul>
+                <h2>🌐 5. Conexões com Serviços Externos</h2>
+                <p>O aplicativo utiliza os seguintes serviços externos para seu funcionamento:</p>
                 
-                <h3>APIs utilizadas (em ordem de fallback):</h3>
+                <h3>📡 APIs de Resultados de Loterias:</h3>
+                <p>Chamadas a APIs públicas e gratuitas para obter resultados oficiais das loterias. Estas chamadas <strong>não enviam nenhum dado pessoal</strong>.</p>
                 <div class="badge-list">
                     <span>loteriascaixa-api.herokuapp.com</span>
                     <span>api-loteria.vercel.app</span>
-                    <span>lotodicas.com.br</span>
                 </div>
-                <p class="small" style="font-size: 0.8rem; color: #718096;">⚠️ As APIs consultadas podem coletar dados conforme suas próprias políticas de privacidade. Recomendamos consultar as políticas de cada serviço para mais informações.</p>
+                
+                <h3>☁️ Firebase (Google):</h3>
+                <div class="info-card">
+                    <h4>Firebase Firestore</h4>
+                    <p>Serviço de banco de dados em nuvem do Google utilizado exclusivamente para armazenar o identificador anônimo do dispositivo (ANDROID_ID) para controle do período de teste gratuito.</p>
+                    <p>Nenhum dado pessoal é enviado ao Firebase. Consulte a <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Política de Privacidade do Firebase</a> e os <a href="https://firebase.google.com/terms" target="_blank" rel="noopener">Termos de Serviço do Firebase</a>.</p>
+                </div>
+                
+                <h3>💳 Google Play Billing:</h3>
+                <div class="info-card">
+                    <h4>Google Play Billing</h4>
+                    <p>Serviço de cobrança do Google utilizado para processar assinaturas. Os dados de pagamento são processados diretamente pelo Google e não são acessados pelo nosso aplicativo. Consulte a <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener">Política de Privacidade do Google Payments</a>.</p>
+                </div>
+                
+                <p style="font-size: 0.8rem; color: #718096;">⚠️ Os serviços externos podem coletar dados conforme suas próprias políticas de privacidade. Recomendamos consultar as políticas de cada serviço para mais informações.</p>
             </div>
 
             <!-- Segurança -->
             <div class="section">
                 <h2>🛡️ 6. Segurança</h2>
-                <p>Como todos os dados são armazenados <strong>localmente no dispositivo do usuário</strong>, a segurança das informações depende exclusivamente das configurações de segurança do seu dispositivo e navegador. Recomendamos:</p>
+                <p>Adotamos medidas de segurança para proteger seus dados:</p>
                 <ul>
-                    <li>Manter seu dispositivo e navegador atualizados</li>
+                    <li>O identificador do dispositivo é transmitido de forma segura (HTTPS)</li>
+                    <li>Os dados locais dependem da segurança do seu dispositivo</li>
+                    <li>Não armazenamos senhas ou informações sensíveis</li>
+                </ul>
+                <p>Recomendamos:</p>
+                <ul>
+                    <li>Manter seu dispositivo e sistema operacional atualizados</li>
                     <li>Não compartilhar seu dispositivo com pessoas não autorizadas</li>
                     <li>Utilizar bloqueio de tela em seu dispositivo</li>
                 </ul>
@@ -374,17 +397,21 @@
 
             <!-- Alterações -->
             <div class="section">
-                <h2>📝 8. Alterações nesta Política</h2>
+                <h2>📝 9. Alterações nesta Política</h2>
                 <p>Podemos atualizar esta Política de Privacidade ocasionalmente. Recomendamos revisar esta página periodicamente para quaisquer alterações. Alterações significativas serão comunicadas por meio de aviso no próprio aplicativo.</p>
+                
+                <h3>Histórico de alterações:</h3>
+                <ul>
+                    <li><strong>17/05/2026:</strong> Adicionada seção sobre coleta de ANDROID_ID via Firebase Firestore para controle de trial</li>
+                    <li><strong>31/03/2026:</strong> Versão inicial da política de privacidade</li>
+                </ul>
             </div>
 
             <!-- Isenção -->
             <div class="section">
-                <h2>⚠️ 9. Isenção de Responsabilidade</h2>
+                <h2>⚠️ 10. Isenção de Responsabilidade</h2>
                 <p>Este aplicativo é uma <strong>ferramenta independente para conferência e geração de jogos</strong> e não possui qualquer vínculo com a Caixa Econômica Federal ou qualquer outra instituição oficial de loterias. Os jogos gerados ou conferidos no aplicativo <strong>não garantem ganhos reais</strong>. Sempre confira seus bilhetes no site oficial das Loterias Caixa.</p>
             </div>
-
-            
         </div>
 
         <!-- Footer com Contato -->
@@ -395,7 +422,7 @@
                 <p><strong>E-mail:</strong> <a href="mailto:aironagm@gmail.com">aironagm@gmail.com</a></p>
                 <button class="btn-copy" onclick="copiarEmail()">📋 Copiar e-mail</button>
                 <p style="margin-top: 15px; font-size: 0.8rem; color: #718096;">
-                    Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail acima.
+                    Se você tiver dúvidas sobre esta Política de Privacidade ou desejar exercer seus direitos sobre seus dados, entre em contato pelo e-mail acima.
                 </p>
             </div>
             <p style="margin-top: 20px; font-size: 0.75rem; color: #a0aec0;">
@@ -412,7 +439,6 @@
             navigator.clipboard.writeText(email).then(() => {
                 mostrarToast("✅ E-mail copiado: " + email);
             }).catch(() => {
-                // Fallback para navegadores antigos
                 const textarea = document.createElement('textarea');
                 textarea.value = email;
                 document.body.appendChild(textarea);
